@@ -15,6 +15,10 @@ img{
     width: 100%;
 }
  
+p{
+    line-height: 1.5;
+}
+
 .nav__container {
     width: 100%;
     max-width: 1200;
@@ -119,6 +123,7 @@ button:active {
 
 .header__img--wrapper {
     padding: 20px;
+    z-index: 2;
 }
 
 .container {
@@ -136,6 +141,52 @@ HIGHLIGHTS
 
 */
 
+#highlights {
+    position: relative;
+}
+
+#highlights:before {
+/* background: url(wave.svg);
+content: "";
+position: absolute;
+top: 1px
+left: 0
+transform: translateY(-100);
+width: 101vw
+height: 12vw;
+background-size: cover;
+background-repeat: no-repeat;
+z-index: 1; */
+}
+
+#highlights:before {
+    background: url('wave.svg');
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    top: 1px;
+    left: 0px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-100);
+}
+
+#highlights:after {
+    background: url('wave.svg');
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    bottom: 1px;
+    left: 0px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-100); 
+}
+
 .highlight__wraper {
     display: flex;
 }
@@ -151,11 +202,12 @@ HIGHLIGHTS
 
 .highlight__para {
     text-align: center;
+    max-width: 280px;
 }
 
 .highlight__img {
     border: 2px solid #7342d65d;
-    color: #7342d65d;
+    color: #7342d6;
     width: 100px;
     height: 100px;
     display: flex;
